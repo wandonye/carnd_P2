@@ -29,6 +29,10 @@ The goals / steps of this project are the following:
 [image9]: ./visualization/balanced.png "balanced"
 [image10]: ./web_imgages/websigns.png "traffic signs from web"
 [image11]: ./web_imgages/comparison.png "compare two signs"
+[image12]: ./visualization/vgg-conv1.png "conv1"
+[image13]: ./visualization/vgg-conv2.png "conv2"
+[image14]: ./visualization/vgg-conv3.png "conv3"
+[image15]: ./visualization/vgg-conv4.png "conv4"
 
 ---
 ### README
@@ -162,11 +166,11 @@ Image 0: As expected, other than `Go straight or right`, the next guess of this 
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| 0.809361      		| Go straight or right 									|
-| 0.190637    		| Turn right ahead									|
-| 1.70663e-06			| Ahead only									|
-| 2.45226e-07     	| Keep right			 				|
-| 1.27938e-08	    | End of no passing by vehicles over 3.5 metric tons    							|
+| 0.809361      	| Go straight or right							|
+| 0.190637    		| Turn right ahead							|
+| 1.70663e-06			| Ahead only							|
+| 2.45226e-07     | Keep right							|
+| 1.27938e-08	    | End of no passing by vehicles over 3.5 metric tons							|
 
 Image 1: Model is very confident in predicting `Turn left ahead`
 | Probability         	|     Prediction	        					|
@@ -227,5 +231,16 @@ Image 6: This is the one outside of the training labels. Top prediction is Child
 For comparison:
 ![compare][image11]
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+### Visualizing the Neural Network
+#### 1. Below shows all the conv layers of VGG. The first two layers are easier to understand. The output of these two layers are similar the effect of Sobel filters. They can help the symbol stand out by emphasizing edges, corners and etc.
+Conv1
+![conv1][image12]
+
+Conv2
+![conv2][image13]
+
+Conv3
+![conv3][image14]
+
+Conv4
+![conv4][image15]
