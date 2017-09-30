@@ -1,2 +1,2 @@
-model_checkpoint_path: "lenet_more_filter_best"
-all_model_checkpoint_paths: "lenet_more_filter_best"
+model_checkpoint_path: "lenet_balanced_92.3129250673"
+all_model_checkpoint_paths: "lenet_balanced_92.3129250673"
