@@ -21,11 +21,13 @@ The goals / steps of this project are the following:
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./visualization/bar_chart_distribution.png "bar_chart"
+[image5]: ./visualization/random_training_img_original.png "random images"
+[image6]: ./visualization/5_img_each_class.png "Random 5 images each"
+[image7]: ./visualization/20_img_each_class.png "Random 20 each"
+[image8]: ./visualization/preprocessed.png "preprocessed"
+[image9]: ./visualization/balanced.png "balanced"
+[image10]: ./web_imgages/websigns.png "traffic signs from web"
 
 ---
 ### Writeup / README
@@ -51,11 +53,11 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data are distributed across different labels
 
-![bar chart of class distribution][./visualization/bar_chart_distribution.png]
+![bar chart of class distribution][image4]
 Randomly sampled images shown below:
-![10 random training images][./visualization/random_training_img_original.png]
-![5 random training images per label][./visualization/5_img_each_class.png]
-![20 random training images per label][./visualization/20_img_each_class.png]
+![10 random training images][image5]
+![5 random training images per label][image6]
+![20 random training images per label][image7]
 
 ### Design and Test a Model Architecture
 
@@ -69,13 +71,13 @@ Then for both grayscale and color images, I decided to apply histogram equalizat
 Then I augmented the data by rotation and perspective transformations. I restricted rotation to +/- 15 degrees since a car camera seldomly see traffic signs in an angle outside of that range. The generation of perspective transformations is also restricted in the sense that the resulting image should not be too small, and the camera angle shouldn't be too off-center.
 
 Here are some examples of preprocessed images
-![preprocessed][./visualization/preprocessed.png]
+![preprocessed][image8]
 
 To balance the training data, I kept all the original training images, and generated new images using rotation and perspective transformation, so that each sign has about 8000 images. This balancing method worked better in validation accuracy than the other method where I random sampled 1000 or all (whichever is smaller) samples from each class, and generated 6 images using rotation and perspective transformation from each image in these samples.
 
 The balanced data now has distribution:
 
-![preprocessed_distribution][./visualization/balanced.png]
+![preprocessed_distribution][image9]
 
 
 #### 2. The best result was achieved using a VGG model. The design is given below:
@@ -140,7 +142,7 @@ If a well known architecture was chosen:
 
 ####1. I downloaded 7 German traffic signs, 6 of which are signs existing in the 43 labels of the training data. The last one is double curve, which is not included in the training data. I added this one purely out of curiosity.
 
-![images from internet][web_imgages/websigns.png]
+![images from internet][image10]
 
 The first image might be difficult to classify because its difference from `Turn right ahead` is minor. Speed limit (30km/h) is sometimes difficult to tell from 50km/h. The `stop` sign and `Turn left ahead` sign presented extra difficulty because of the perspective view.
 
