@@ -1,0 +1,3 @@
+model_checkpoint_path: "modified_lenet_color_balanced_84.9206348693"
+all_model_checkpoint_paths: "modified_lenet_color_balanced"
+all_model_checkpoint_paths: "modified_lenet_color_balanced_84.9206348693"

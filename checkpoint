@@ -1,6 +1,2 @@
-model_checkpoint_path: "lenet_color_balanced_75.1247165641"
-all_model_checkpoint_paths: "lenet_color_balanced_76.984127022"
-all_model_checkpoint_paths: "lenet_color_balanced"
-all_model_checkpoint_paths: "lenet_color_balanced_79.8866212503"
-all_model_checkpoint_paths: "lenet_color_balanced_75.6235827016"
-all_model_checkpoint_paths: "lenet_color_balanced_75.1247165641"
+model_checkpoint_path: "lenet_balanced"
+all_model_checkpoint_paths: "lenet_balanced"

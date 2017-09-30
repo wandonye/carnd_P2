@@ -1,0 +1,3 @@
+model_checkpoint_path: "vgg_balanced_88.14058958"
+all_model_checkpoint_paths: "vgg_balanced_best"
+all_model_checkpoint_paths: "vgg_balanced_88.14058958"

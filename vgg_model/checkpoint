@@ -1,0 +1,2 @@
+model_checkpoint_path: "vgg_balanced_best"
+all_model_checkpoint_paths: "vgg_balanced_best"
