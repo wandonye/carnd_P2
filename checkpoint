@@ -1,2 +1,0 @@
-model_checkpoint_path: "lenet_balanced"
-all_model_checkpoint_paths: "lenet_balanced"

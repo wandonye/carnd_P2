@@ -28,13 +28,12 @@ The goals / steps of this project are the following:
 [image8]: ./visualization/preprocessed.png "preprocessed"
 [image9]: ./visualization/balanced.png "balanced"
 [image10]: ./web_imgages/websigns.png "traffic signs from web"
+[image11]: ./web_imgages/comparison.png "compare two signs"
 
 ---
-### Writeup / README
+### README
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
-You're reading it! and here is a link to my [project code](https://github.com/wandonye/carnd_P2/blob/master/Traffic_Sign_Classifier.ipynb)
+#### 1. You're reading it! and here is a link to my [project code](https://github.com/wandonye/carnd_P2/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -54,7 +53,9 @@ signs data set:
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data are distributed across different labels
 
 ![bar chart of class distribution][image4]
+
 Randomly sampled images shown below:
+
 ![10 random training images][image5]
 ![5 random training images per label][image6]
 ![20 random training images per label][image7]
@@ -127,16 +128,10 @@ Before reaching the final model, I tried the following:
 * With more data that are balanced, and dropout layers, validation accuracy plateaued with 93.2% and training accuracy kept improve and passed 95%. It's possible that after the augmentation, I may need more filters to pickup the features.
 
 * Since we have more data with augmentation, I decided to increase parameters in the model. In particular, I increased number of filters in conv1 layer of LeNet (from 6 to 16).
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
 * Finally I borrowed the idea from VGG: use consecutive small (3x3) filters to replace large filters (5x5). Two pairs of (3x3) conv layers gave a receptive field of 10x10. This is reasonable for a 32x32 image with basically one object occupying most portion of the image.
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-
+*
 
 ###Test a Model on New Images
 
@@ -230,7 +225,7 @@ Image 6: This is the one outside of the training labels. Top prediction is Child
 | 000479989 | Pedestrians |
 
 For comparison:
-![compare][web_imgages/comparison.png]
+![compare][image11]
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
