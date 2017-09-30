@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition**
+# **Traffic Sign Recognition**
 
 ## Project: Build a Traffic Sign Recognition Program
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
@@ -27,19 +27,16 @@ The goals / steps of this project are the following:
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
-## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
-
 ---
-###Writeup / README
+### Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [project code](https://github.com/wandonye/carnd_P2/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Basic summary of the data set.
+#### 1. Basic summary of the data set.
 
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
@@ -50,7 +47,7 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-####2. Visualization of the dataset.
+#### 2. Visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data are distributed across different labels
 
@@ -60,9 +57,9 @@ Randomly sampled images shown below:
 ![5 random training images per label][./visualization/5_img_each_class.png]
 ![20 random training images per label][./visualization/20_img_each_class.png]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Preprocess the image data.
+#### 1. Preprocess the image data.
 What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 I created a grayscale version for each image. In the later modeling step, I tried both the grayscale and the color version.
@@ -81,7 +78,7 @@ The balanced data now has distribution:
 ![preprocessed_distribution][./visualization/balanced.png]
 
 
-####2. The best result was achieved using a VGG model. The design is given below:
+#### 2. The best result was achieved using a VGG model. The design is given below:
 
 My final model consisted of the following layers:
 
