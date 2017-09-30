@@ -27,8 +27,8 @@ The goals / steps of this project are the following:
 [image7]: ./visualization/20_img_each_class.png "Random 20 each"
 [image8]: ./visualization/preprocessed.png "preprocessed"
 [image9]: ./visualization/balanced.png "balanced"
-[image10]: ./web_imgages/websigns.png "traffic signs from web"
-[image11]: ./web_imgages/comparison.png "compare two signs"
+[image10]: ./web_images/websigns.png "traffic signs from web"
+[image11]: ./web_images/comparison.png "compare two signs"
 [image12]: ./visualization/vgg-conv1.png "conv1"
 [image13]: ./visualization/vgg-conv2.png "conv2"
 [image14]: ./visualization/vgg-conv3.png "conv3"
@@ -37,7 +37,7 @@ The goals / steps of this project are the following:
 ---
 ### README
 
-#### 1. You're reading it! and here is a link to my [project code](https://github.com/wandonye/carnd_P2/blob/master/Traffic_Sign_Classifier.ipynb)
+#### 1. You're reading it! To check my codes and the results of the code, check [here](https://github.com/wandonye/carnd_P2/blob/master/Traffic_Sign_Classifier.html). You may also download my [jupyter notebook file](https://github.com/wandonye/carnd_P2/blob/master/Traffic_Sign_Classifier.ipynb) and try it yourself.
 
 ### Data Set Summary & Exploration
 
@@ -135,17 +135,15 @@ Before reaching the final model, I tried the following:
 
 * Finally I borrowed the idea from VGG: use consecutive small (3x3) filters to replace large filters (5x5). Two pairs of (3x3) conv layers gave a receptive field of 10x10. This is reasonable for a 32x32 image with basically one object occupying most portion of the image.
 
-*
+### Test a Model on New Images
 
-###Test a Model on New Images
-
-####1. I downloaded 7 German traffic signs, 6 of which are signs existing in the 43 labels of the training data. The last one is double curve, which is not included in the training data. I added this one purely out of curiosity.
+#### 1. I downloaded 7 German traffic signs, 6 of which are signs existing in the 43 labels of the training data. The last one is double curve, which is not included in the training data. I added this one purely out of curiosity.
 
 ![images from internet][image10]
 
 The first image might be difficult to classify because its difference from `Turn right ahead` is minor. Speed limit (30km/h) is sometimes difficult to tell from 50km/h. The `stop` sign and `Turn left ahead` sign presented extra difficulty because of the perspective view.
 
-####2. Here are the results of the prediction:
+#### 2. Here are the results of the prediction:
 
 | Image			        |     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
@@ -160,7 +158,7 @@ The first image might be difficult to classify because its difference from `Turn
 
 The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 92.7%. The model was able to deal with different perspective angles because of the augmentation I did in the preprocessing step.
 
-####3. The top 5 softmax probabilities for each image along with the sign type of each probability.
+#### 3. The top 5 softmax probabilities for each image along with the sign type of each probability.
 
 Image 0: As expected, other than `Go straight or right`, the next guess of this image is `Turn right ahead`. The top five soft max probabilities were
 
@@ -176,10 +174,10 @@ Image 1: Model is very confident in predicting `Turn left ahead`
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
 | 0.998798    		| Turn left ahead							|
-| 0.000646399    	| Keep right 				|
-| 0.000517454 		| Ahead only				|
-| 1.95769e-05	| Go straight or left								|
-| 1.75404e-05    | Go straight or right		|
+| 0.000646399    	| Keep right							|
+| 0.000517454 		| Ahead only							|
+| 1.95769e-05 		| Go straight or left 		|
+| 1.75404e-05 		| Go straight or right		|
 
 Image 2: Model is very confident in predicting `General caution`
 
@@ -204,29 +202,29 @@ Image 3: Model is extremely confident in predicting `Stop` sign. This is because
 Image 4: Model is very confident in predicting `Speed limit (30km/h)`, but also considered `Speed limit (50km/h)`
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| 0.925796 		| Speed limit (30km/h)|
-| 0.0731715  	| Speed limit (50km/h) 	|
-| 0.000847794	| Speed limit (70km/h) |
-| 9.14498e-05	| Speed limit (100km/h)	|
-| 5.41302e-05 | Speed limit (20km/h)  |
+| 0.925796 		| Speed limit (30km/h) 		|
+| 0.0731715  	| Speed limit (50km/h) 		|
+| 0.000847794	| Speed limit (70km/h) 		|
+| 9.14498e-05	| Speed limit (100km/h) 		|
+| 5.41302e-05 | Speed limit (20km/h) 		|
 
 Image 5: Model is extremely confident in predicting `No entry` sign.
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
 | 1.0		| No entry |
-| 6.38649e-18  	| No passing for vehicles over 3.5 metric tons 	|
-| 2.81191e-18	| Stop |
-| 1.06696e-19	| Yield	|
-| 3.82698e-29 | No passing |
+| 6.38649e-18  	| No passing for vehicles over 3.5 metric tons 		|
+| 2.81191e-18  	| Stop 		|
+| 1.06696e-19  	| Yield 		|
+| 3.82698e-29  	| No passing 		|
 
 Image 6: This is the one outside of the training labels. Top prediction is Children crossing.
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| 0.984269	| Children crossing |
-| 0.0113422 	| Beware of ice/snow 	|
-| 0.00183505	| Road narrows on the right |
-| 0.00163407	| Dangerous curve to the right	|
-| 000479989 | Pedestrians |
+| 0.984269	| Children crossing 		|
+| 0.0113422	| Beware of ice/snow 		|
+| 0.00183505	| Road narrows on the right 		|
+| 0.00163407	| Dangerous curve to the right 		|
+| 000479989	| Pedestrians 		|
 
 For comparison:
 ![compare][image11]
