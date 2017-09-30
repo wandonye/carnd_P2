@@ -171,6 +171,7 @@ Image 0: As expected, other than `Go straight or right`, the next guess of this 
 | 1.27938e-08	    | End of no passing by vehicles over 3.5 metric tons							|
 
 Image 1: Model is very confident in predicting `Turn left ahead`
+
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
 | 0.998798    		| Turn left ahead							|
@@ -200,6 +201,7 @@ Image 3: Model is extremely confident in predicting `Stop` sign. This is because
 | 2.47972e-20  | Speed limit (20km/h)  |
 
 Image 4: Model is very confident in predicting `Speed limit (30km/h)`, but also considered `Speed limit (50km/h)`
+
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
 | 0.925796 		| Speed limit (30km/h) 		|
@@ -209,6 +211,7 @@ Image 4: Model is very confident in predicting `Speed limit (30km/h)`, but also 
 | 5.41302e-05 | Speed limit (20km/h) 		|
 
 Image 5: Model is extremely confident in predicting `No entry` sign.
+
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
 | 1.0		| No entry |
@@ -218,6 +221,7 @@ Image 5: Model is extremely confident in predicting `No entry` sign.
 | 3.82698e-29  	| No passing 		|
 
 Image 6: This is the one outside of the training labels. Top prediction is Children crossing.
+
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
 | 0.984269	| Children crossing 		|
